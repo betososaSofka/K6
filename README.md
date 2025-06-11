@@ -19,9 +19,7 @@ Asegúrate de tener instalado:
 
 1. Abre la terminal y navega hasta el directorio del proyecto:
 
-  ```bash
   cd /Users/humberto-sosa/K6
-
 
 2. Ejecuta el test de carga:
 
