@@ -2,24 +2,24 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { SharedArray } from 'k6/data';
 
-// Cargar usuarios desde el CSV
+
 const users = new SharedArray('users', function () {
   return open('./users.csv')
     .split('\n')
-    .slice(1) // omite cabecera
+    .slice(1) 
     .map(line => {
       const [username, password] = line.split(',');
       return { username, password };
     });
 });
 
-// Configuración del escenario
+
 export const options = {
-  vus: 20, // Virtual Users
-  duration: '10s', // Duración de la prueba
+  vus: 20, 
+  duration: '10s', 
   thresholds: {
-    http_req_duration: ['p(95)<1500'], // menos de 1.5s
-    http_req_failed: ['rate<0.03'], // menos de 3% de errores
+    http_req_duration: ['p(95)<1500'], 
+    http_req_failed: ['rate<0.03'], 
   },
 };
 
