@@ -25,6 +25,13 @@ Asegúrate de tener instalado:
 
   k6 run login_test.js
 
+  ## Evidencia
+  ### Script
+  ![Captura de pantalla 2025-06-11 a la(s) 6 03 26 p m](https://github.com/user-attachments/assets/8ce6291a-092c-4a56-b963-8292608a7582)
+
+  ### Reporte
+  ![Captura de pantalla 2025-06-11 a la(s) 5 25 10 p m](https://github.com/user-attachments/assets/7f7f58e7-9674-4ae1-9948-873d95210cd1)
+
 
 ## 📊 Reporte de resultados
 
