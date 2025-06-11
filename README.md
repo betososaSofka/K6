@@ -1,43 +1,60 @@
-📄 README - Prueba de carga con K6
+# 📄 README - Prueba de carga con K6
 
-Este proyecto contiene una prueba de carga usando K6 para validar el comportamiento del endpoint de login de FakeStoreAPI, con el objetivo de alcanzar 20 TPS, tiempos de respuesta menores a 1.5 segundos y una tasa de error inferior al 3%.
+Este proyecto contiene una prueba de carga usando **K6** para validar el comportamiento del endpoint de login de [FakeStoreAPI](https://fakestoreapi.com/auth/login), con el objetivo de alcanzar 20 TPS, tiempos de respuesta menores a 1.5 segundos y una tasa de error inferior al 3%.
 
-✅ Requisitos
+---
+
+## ✅ Requisitos
 
 Asegúrate de tener instalado:
 
-K6 (versión recomendada: v0.49.0 o superior)
+- [K6](https://k6.io/docs/getting-started/installation/) (versión recomendada: v0.49.0 o superior)
+- [Node.js](https://nodejs.org/) si deseas agregar integraciones adicionales (opcional)
+- Sistema operativo: macOS (probado en Mac M1)
 
-Node.js si deseas agregar integraciones adicionales (opcional)
 
-Sistema operativo: MacOS (probado en Mac M1)
+---
 
-🚀 Ejecución del test
+## 🚀 Ejecución del test
 
-Abre la terminal y navega hasta el directorio del proyecto:
+1. Abre la terminal y navega hasta el directorio del proyecto:
 
+```bash
 cd /Users/humberto-sosa/K6
 
-Ejecuta el test de carga:
+2. Ejecuta el test de carga:
 
 k6 run login_test.js
 
-Esto comenzará la prueba utilizando los datos en users.csv. Asegúrate de que el archivo CSV esté en la misma ruta.
 
-📊 Reporte de resultados
+## 📊 Reporte de resultados
 
-K6 muestra los resultados directamente en la consola al finalizar la ejecución. Si deseas generar un reporte HTML, puedes:
-
-Instalar el generador de reportes:
-
-npm install -g k6-html-reporter
-
-Ejecutar el script con salida en JSON:
+K6 muestra los resultados directamente en la consola al finalizar la ejecución. Si deseas generar un reporte JSON, puedes:
 
 k6 run login_test.js --out json=resultado.json
 
-Generar el HTML:
 
-k6-html-reporter --summary-export resultado.json --out report.html
+## 📌 Datos de entrada
 
-El archivo report.html se generará en el mismo directorio y puedes abrirlo en tu navegador.
+Los usuarios están definidos en el archivo users.csv:
+
+user,passwd
+donero,ewedon
+kevinryan,kev02937@
+johnd,m38rmF$
+derek,jklg*_56
+mor_2314,83r5^_
+
+
+## 🧪 Conclusiones
+
+Archivo separado: conclusiones.txt con detalles técnicos. Resumen breve:
+
+✅ Se alcanzaron los 20 TPS requeridos en escenarios de prueba.
+✅ El 100% de las respuestas estuvieron por debajo de 1.5s.
+✅ No se detectaron errores mayores ni timeouts en los intentos.
+
+Impedimentos o dificultades:
+🧩 Manejo inicial de rutas de archivos CSV en K6.
+🔐 Configuración del entorno con permisos (uso de token para subir a GitHub).
+📂 Generar reportes en HTML requiere pasos adicionales (output JSON + convertidor).
