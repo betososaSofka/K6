@@ -19,19 +19,20 @@ Asegúrate de tener instalado:
 
 1. Abre la terminal y navega hasta el directorio del proyecto:
 
-```bash
-cd /Users/humberto-sosa/K6
+  ```bash
+  cd /Users/humberto-sosa/K6
+
 
 2. Ejecuta el test de carga:
 
-k6 run login_test.js
+  k6 run login_test.js
 
 
 ## 📊 Reporte de resultados
 
 K6 muestra los resultados directamente en la consola al finalizar la ejecución. Si deseas generar un reporte JSON, puedes:
 
-k6 run login_test.js --out json=resultado.json
+  k6 run login_test.js --out json=resultado.json
 
 
 ## 📌 Datos de entrada
