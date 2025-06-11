@@ -49,11 +49,11 @@ mor_2314,83r5^_
 
  # Archivo separado: conclusiones.txt con detalles técnicos. Resumen breve:
 
-  ✅ Se alcanzaron los 20 TPS requeridos en escenarios de prueba.
-  ✅ El 100% de las respuestas estuvieron por debajo de 1.5s.
+  ✅ Se alcanzaron los 20 TPS requeridos en escenarios de prueba.<br>
+  ✅ El 100% de las respuestas estuvieron por debajo de 1.5s.<br>
   ✅ No se detectaron errores mayores ni timeouts en los intentos.
 
 # Impedimentos o dificultades:
-  🧩 Manejo inicial de rutas de archivos CSV en K6.
-  🔐 Configuración del entorno con permisos (uso de token para subir a GitHub).
+  🧩 Manejo inicial de rutas de archivos CSV en K6.<br>
+  🔐 Configuración del entorno con permisos (uso de token para subir a GitHub).<br>
   📂 Generar reportes en HTML requiere pasos adicionales (output JSON + convertidor).
