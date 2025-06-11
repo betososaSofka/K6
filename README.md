@@ -44,11 +44,11 @@ K6 muestra los resultados directamente en la consola al finalizar la ejecución.
 
 Los usuarios están definidos en el archivo users.csv:
 
-user,passwd
-donero,ewedon
-kevinryan,kev02937@
-johnd,m38rmF$
-derek,jklg*_56
+user,passwd<br>
+donero,ewedon<br>
+kevinryan,kev02937@<br>
+johnd,m38rmF$<br>
+derek,jklg*_56<br>
 mor_2314,83r5^_
 
 
